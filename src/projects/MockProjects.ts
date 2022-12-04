@@ -5,9 +5,9 @@ export const PROJECTS: Project[] = [];
 
 export function createRandomProject(): Project {
   faker.locale = 'id_ID';
-  var googleMapPrefix = "https://www.google.com/maps/@"
-  var lat = faker.address.latitude()
-  var long = faker.address.longitude()
+  var googleMapPrefix = "https://www.google.com/maps/@";
+  var lat = faker.address.latitude();
+  var long = faker.address.longitude();
   return {
     id: faker.datatype.uuid(),
     name: faker.animal.cat(),
@@ -23,6 +23,9 @@ export function createRandomProject(): Project {
     createdAt: new Date(),
     updatedAt: new Date(),
     isSoftDeleted: false
-  }
+  };
 }
-// TODO: create looping return for mock data x times
+
+Array.from({ length: 10 }).forEach(() => {
+  PROJECTS.push(createRandomProject());
+});

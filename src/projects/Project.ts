@@ -29,6 +29,6 @@ export class Project {
     if (initializer.isActive) this.isActive = initializer.isActive;
     if (initializer.createdAt) this.createdAt = initializer.createdAt;
     if (initializer.updatedAt) this.updatedAt = initializer.updatedAt;
-    if (initializer.deletedAt) this.deletedAt = initializer.deletedAt;
+    if (initializer.isSoftDeleted) this.isSoftDeleted = initializer.isSoftDeleted;
   }
 }
